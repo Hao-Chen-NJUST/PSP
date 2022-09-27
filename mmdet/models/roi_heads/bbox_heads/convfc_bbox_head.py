@@ -59,7 +59,7 @@ class ConvFCBBoxHead(BBoxHead):
         self.proto = proto
         self.ranking = ranking
         if proto:
-            self.proto_mip = self._proto_mapping(2048, fc_out_channels)
+            self.proto_mlp = self._proto_mapping(2048, fc_out_channels)
 
         # add shared convs and fcs
         self.shared_convs, self.shared_fcs, last_layer_dim = \
